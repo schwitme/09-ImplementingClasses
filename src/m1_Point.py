@@ -51,9 +51,9 @@ class Point(object):
     def clone(self):
         return Point(self.x,self.y)
 
-    def move_to(self,dx,dy):
-        self.x = dx
-        self.y = dy
+    def move_to(self,x,y):
+        self.x = x
+        self.y = y
 
     def move_by(self):
         pass
