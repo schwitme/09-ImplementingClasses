@@ -27,17 +27,53 @@ def main():
 ###############################################################################
 
 # -----------------------------------------------------------------------------
-# TODO: 2.          With your instructor, READ THE INSTRUCTIONS in
-# TODO (continued)  in file  m0_INSTRUCTIONS.txt, asking questions as needed.
+# DONE: 2.          With your instructor, READ THE INSTRUCTIONS in
+# DONE (continued)  in file  m0_INSTRUCTIONS.txt, asking questions as needed.
 #
-# TODO (continued): Then implement a class called   Point that has NO METHODS
-# TODO (continued)  yet, just the lines that start the definition of any class:
+# DONE (continued): Then implement a class called   Point that has NO METHODS
+# DONE (continued)  yet, just the lines that start the definition of any class:
 #
 #      class NAME_OF_CLASS(object):
 #          """ Brief description of what objects of the class 'are'."""
 #
 #   Run the program and correct any syntax (notational) errors.
 # -----------------------------------------------------------------------------
+
+class Point(object):
+
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+
+    def __repr__(self):
+        pass
+
+    def clone(self):
+        pass
+
+    def move_to(self):
+        pass
+
+    def move_by(self):
+        pass
+
+    def get_number_of_moves_made(self):
+        pass
+
+    def get_distance_from(self):
+        pass
+
+    def get_distance_from_start(self):
+        pass
+
+    def get_distance_traveled(self):
+        pass
+    def closer_to(self):
+        pass
+
+    def halfway_to(self):
+        pass
+
 
 ###############################################################################
 # NOTE: For ALL of the methods that you implement, the method is allowed
@@ -92,7 +128,7 @@ def run_test_init():
         print('Actual for p2:  ', p2.x, p2.y)
     """
     # -------------------------------------------------------------------------
-    # TODO: 3.
+    # DONE: 3.
     #   a. Read the above specification of the   __init__   method.
     #        Do NOT proceed until you understand WHAT it should do
     #        (but not necessarily HOW it will do it).
@@ -121,6 +157,25 @@ def run_test_init():
     print('-----------------------------------------------------------')
     print('Testing the   __init__   method of the Point class.')
     print('-----------------------------------------------------------')
+
+    p1 = Point(30, 18)
+    print()
+    print('Expected for p1: 30 18')
+    print('Actual for p1:  ', p1.x, p1.y)
+
+    p2 = Point(100, -40)
+    print()
+    print('Expected for p2: 100 -40')
+    print('Actual for p2:  ', p2.x, p2.y)
+    print('Expected for p1: 30 18')
+    print('Actual for p1:  ', p1.x, p1.y)
+
+    p1.y = 999
+    print()
+    print('Expected for p1: 30 999')
+    print('Actual for p1:  ', p1.x, p1.y)
+    print('Expected for p2: 100 -40')
+    print('Actual for p2:  ', p2.x, p2.y)
 
 
 def run_test_repr():
